@@ -14,6 +14,7 @@ namespace ASCIIArt
         {
             for (int i = 0; i < image.GetLength(0); i++)
             {
+
                 string s = "";
                 for (int j = 0; j < image.GetLength(1); j++)
                 {
