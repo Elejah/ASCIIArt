@@ -100,7 +100,7 @@ namespace ASCIIArt
             return img;
         }
 
-        public Bitmap ResizeImage(Bitmap bitmap, int width = 40, int height = 40, InterpolationMode mode = InterpolationMode.Bilinear)
+        public Bitmap ResizeImage(Bitmap bitmap, int width, int height, InterpolationMode mode = InterpolationMode.Bilinear)
         {
             var res = new Bitmap(width, height);
             using (var gr = Graphics.FromImage(res))

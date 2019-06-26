@@ -14,10 +14,14 @@ namespace ASCIIArt
         [STAThread]
         static void Main(string[] args)
         {
-            InitializeSettings();
-            IArtBuilder builder = new ASCIIBuilder();
-            builder.ConvertToArtType(builder.Decolorization(builder.ResizeImage(LoadImage())));
-            Console.Read();
+            while (true)
+            {
+                InitializeSettings();
+                IArtBuilder builder = new ASCIIBuilder();
+                builder.ConvertToArtType(builder.Decolorization(builder.ResizeImage(LoadImage())));
+                Console.WriteLine("Enter any key..........");
+                Console.Read();
+            }
         }
         static void InitializeSettings()
         {

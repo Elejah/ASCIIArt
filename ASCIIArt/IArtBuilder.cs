@@ -11,7 +11,7 @@ namespace ASCIIArt
     interface IArtBuilder
     {
         byte[,] Decolorization(Bitmap bitmap);
-        Bitmap ResizeImage(Bitmap bitmap,int width =40,int height = 40, InterpolationMode mode = InterpolationMode.Bilinear);
+        Bitmap ResizeImage(Bitmap bitmap,int width=64,int height =64, InterpolationMode mode = InterpolationMode.Bilinear);
         void ConvertToArtType(byte[,] image); 
     }
 }
