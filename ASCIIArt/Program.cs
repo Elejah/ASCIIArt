@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Threading;
 
 namespace ASCIIArt
 {
@@ -19,8 +20,9 @@ namespace ASCIIArt
                 InitializeSettings();
                 IArtBuilder builder = new ASCIIBuilder();
                 builder.ConvertToArtType(builder.Decolorization(builder.ResizeImage(LoadImage())));
-                Console.WriteLine("Enter any key..........");
+                Console.WriteLine("Press any key to select a new one...");
                 Console.Read();
+                Thread.Sleep(500);
             }
         }
         static void InitializeSettings()
